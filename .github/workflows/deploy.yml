@@ -70,4 +70,4 @@ jobs:
         name: Build & Apply
         run: |
           kustomize edit set image ${{ github.repository }}=${{ steps.ecr.outputs.image }}
-          kustomize build k8s | kubectl apply -f -
+          kustomize build k8s/overlays/production | kubectl apply -f -
