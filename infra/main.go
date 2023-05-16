@@ -11,6 +11,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		// Get some configuration values or set default values
 		cfg := config.New(ctx, "")
+
 		minClusterSize, err := cfg.TryInt("minClusterSize")
 		if err != nil {
 			minClusterSize = 3
@@ -67,6 +68,7 @@ func main() {
 		// Export some values in case they are needed elsewhere
 		ctx.Export("kubeconfig", eksCluster.Kubeconfig)
 		ctx.Export("vpcId", eksVpc.VpcId)
+
 		return nil
 	})
 }
