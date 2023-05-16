@@ -17,3 +17,9 @@ This is the smallest amount of effort to get this functioning, but it works, and
 1. Run `infra` directory using `pulumi up`
 2. Grab the `EKS_CLUSTER_NAME` value from AWS and populate the GitHub Secrets
    - TODO: This can be automated in Pulumi, but I'm lazy right now.
+
+## TODO
+
+- [ ] Use GitHub OIDC to authenticate to EKS directly
+- [ ] Use GitHub Actions to deploy the Pulumi stack
+- [ ] Use Pulumi to set required GitHub Secrets
