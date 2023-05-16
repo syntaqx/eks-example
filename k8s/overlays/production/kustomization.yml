@@ -3,3 +3,9 @@ kind: Kustomization
 resources:
 - ../../base
 namePrefix: prod-
+images:
+- name: nginx/nginx
+  newTag: latest
+- name: syntaqx/eks-example
+  newName: nginx/nginx
+  newTag: latest
