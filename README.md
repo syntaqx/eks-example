@@ -6,9 +6,9 @@ This is the smallest amount of effort to get this functioning, but it works, and
 
 ## Secrets
 
+- `EKS_CLUSTER_NAME` - The name of the cluster created via Pulumi in `infra`
 - `DOCKERHUB_USERNAME`
 - `DOCKERHUB_TOKEN`
-- `EKS_CLUSTER_NAME` - The name of the cluster created via Pulumi in `infra`
 - `AWS_ACCESS_KEY_ID`
 - `AWS_SECRET_ACCESS_KEY`
 
