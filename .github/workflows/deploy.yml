@@ -25,6 +25,9 @@ jobs:
         name: Checkout
         uses: actions/checkout@v3
       -
+        name: Install Kustomize
+        uses: syntaqx/setup-kustomize@v1
+      -
         name: Set output vars
         id: vars
         run: echo "sha_short=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
@@ -65,3 +68,6 @@ jobs:
         name: Update kubeconfig for EKS cluster
         run: |
           aws eks update-kubeconfig --name ${{ env.EKS_CLUSTER_NAME }}
+      -
+        name: Build & Apply
+        run: kustomize build k8s | kubectl apply -f
