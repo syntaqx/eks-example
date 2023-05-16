@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+env:
+  AWS_DEFAULT_REGION: us-east-1
+  EKS_CLUSTER_NAME: eks-cluster-eksCluster-9a39c85
+
 jobs:
 
   build:
@@ -36,11 +40,14 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-region: ${{ env.AWS_DEFAULT_REGION }}
       -
         name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
+      -
+        name: AWS CLI Version
+        run: aws --version
       -
         name: Assert ECR repository exists
         run: |
@@ -54,3 +61,7 @@ jobs:
           docker tag ${{ needs.build.outputs.image }} $ECR_IMAGE
           docker push $ECR_IMAGE
           echo "image=$ECR_IMAGE" >> "$GITHUB_OUTPUT"
+      -
+        name: Update kubeconfig for EKS cluster
+        run: |
+          aws eks update-kubeconfig --name ${{ env.EKS_CLUSTER_NAME }}
