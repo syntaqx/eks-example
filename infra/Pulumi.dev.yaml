@@ -1,0 +1,7 @@
+config:
+  aws:region: us-east-1
+  gitops:desiredClusterSize: "3"
+  gitops:eksNodeInstanceType: t3.medium
+  gitops:maxClusterSize: "6"
+  gitops:minClusterSize: "3"
+  gitops:vpcNetworkCidr: 10.0.0.0/16
