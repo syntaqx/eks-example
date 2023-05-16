@@ -23,3 +23,7 @@ This is the smallest amount of effort to get this functioning, but it works, and
 - [ ] Use GitHub OIDC to authenticate to EKS directly
 - [ ] Use GitHub Actions to deploy the Pulumi stack
 - [ ] Use Pulumi to set required GitHub Secrets
+
+## Note
+
+This flow does function, and you can see it functioning historically, but I've destroyed the eks-cluster configured as I don't wanna spend money on it ;)
