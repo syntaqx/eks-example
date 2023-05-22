@@ -22,7 +22,7 @@ To make the workflow as modification free as possible, all the values you should
 ## Manual Steps
 
 1. Run `infra` directory using `pulumi up`
-2. Grab the `EKS_CLUSTER_NAME` value from AWS and populate the GitHub Secrets
+2. Grab the `EKS_CLUSTER_NAME` value from AWS and populate the GitHub Secrets & variables
    - TODO: This can be automated in Pulumi, but I'm lazy right now.
 
 ## TODO
