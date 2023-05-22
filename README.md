@@ -4,11 +4,15 @@ A simple build out workflow that demos the ability to build & push a Docker Cont
 
 This is the smallest amount of effort to get this functioning, but it works, and is very simple to expand on.
 
-## Variables
+## Variables & Secrets
+
+To make the workflow as modification free as possible, all the values you should require to enable this for yourself are set via Variables & Secrets.
+
+### Variables
 
 - `EKS_CLUSTER_NAME` - The name of the cluster created via Pulumi in `infra`
 
-## Secrets
+### Secrets
 
 - `DOCKERHUB_USERNAME`
 - `DOCKERHUB_TOKEN`
