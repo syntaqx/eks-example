@@ -4,7 +4,7 @@ A simple build out workflow that demos the ability to build & push a Docker Cont
 
 This is the smallest amount of effort to get this functioning, but it works, and is very simple to expand on.
 
-## Variables & Secrets
+## Secrets and variables
 
 To make the workflow as modification free as possible, all the values you should require to enable this for yourself are set via Variables & Secrets.
 
