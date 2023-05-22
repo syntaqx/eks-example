@@ -65,7 +65,7 @@ jobs:
           echo "image=$ECR_IMAGE" >> "$GITHUB_OUTPUT"
       -
         name: Update kubeconfig for EKS cluster
-        run: aws eks update-kubeconfig --name ${{ secrets.EKS_CLUSTER_NAME }}
+        run: aws eks update-kubeconfig --name ${{ vars.EKS_CLUSTER_NAME }}
       -
         name: Build & Apply
         run: |
