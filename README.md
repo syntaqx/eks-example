@@ -4,9 +4,12 @@ A simple build out workflow that demos the ability to build & push a Docker Cont
 
 This is the smallest amount of effort to get this functioning, but it works, and is very simple to expand on.
 
-## Secrets
+## Variables
 
 - `EKS_CLUSTER_NAME` - The name of the cluster created via Pulumi in `infra`
+
+## Secrets
+
 - `DOCKERHUB_USERNAME`
 - `DOCKERHUB_TOKEN`
 - `AWS_ACCESS_KEY_ID`
